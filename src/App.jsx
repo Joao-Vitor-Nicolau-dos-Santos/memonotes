@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Navigate,Route,Routes } from 'react-router-dom';
+import BlocList from './Componentes/BlocList/index';
+import BlocForm from './Componentes/BlocForm/index';
+import Cabecalho from './Componentes/Cabecalho';
+
+
+// // Configurações das paginas
+// import Notas from './Paginas/Notas';
+// import Salvos from './Paginas/Salvos';
+// import Config from './Paginas/Config';
+// import Inicio from './Paginas/Inicio';
+
+// Sistema de notas em si
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      <Cabecalho/>
+      <BlocForm/>
+      <BlocList/>
 
-export default App
+      {/* <Routes>
+          <Route index element={<Navigate replace to="/inicio" />} />
+          <Route path='/inicio' element={<Inicio/>} />
+          <Route path='/salvos' element={<Salvos/>} />
+          <Route path='/notas' element={<Notas/>} />
+          <Route path='/config' element={<Config/>} />
+      </Routes> */}
+    </>
+  );
+};
+
+export default App;
