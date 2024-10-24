@@ -1,10 +1,14 @@
+section{
+    margin-top: 6rem;
+}
+
 .form_title{
     text-align: center;
     font-size: 2.5em;
 }
 
 .form{
-    border: 0.5px solid #000;
+    border: 2px solid rgb(255, 196, 0);
     padding-block: 10px;
     border-radius: 20px;
     display: flex;
@@ -21,7 +25,7 @@
     height: 4vw;
     margin: 4px;
     border-radius: 10px;
-    border: 1px solid rgb(53, 53, 53);
+    border: 1px solid rgb(255, 196, 0);
     padding-left: 5px;
 }
 
@@ -31,7 +35,7 @@
     height: 25vh;
     margin: 4px;
     border-radius: 10px;
-    border: 1px solid rgb(53, 53, 53);
+    border: 1px solid rgb(255, 196, 0);
     padding-left: 5px;
 }
 

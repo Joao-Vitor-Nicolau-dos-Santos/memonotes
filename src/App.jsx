@@ -5,10 +5,12 @@ import Cabecalho from './Componentes/Cabecalho';
 
 
 // // Configurações das paginas
-// import Notas from './Paginas/Notas';
-// import Salvos from './Paginas/Salvos';
-// import Config from './Paginas/Config';
-// import Inicio from './Paginas/Inicio';
+import Cadastro from './Paginas/Notas/index';
+import Inexistente from './Paginas/Inicio/index';
+import Inicio from './Paginas/Inicio/index';
+import Login from './Paginas/Inicio/index';
+import Notas from './Paginas/Notas/index';
+
 
 // Sistema de notas em si
 
@@ -20,13 +22,14 @@ function App() {
       <BlocForm/>
       <BlocList/>
 
-      {/* <Routes>
-          <Route index element={<Navigate replace to="/inicio" />} />
-          <Route path='/inicio' element={<Inicio/>} />
-          <Route path='/salvos' element={<Salvos/>} />
-          <Route path='/notas' element={<Notas/>} />
-          <Route path='/config' element={<Config/>} />
-      </Routes> */}
+      <Routes>
+        <Route index element={<Navigate replace to="/inicio" />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/inicio" element={<Inicio />} />
+        <Route path="/login" element={<Login />}/>
+        <Route path="/notas" element={<Notas />}/>
+        <Route path="*" element={<Inexistente />} />
+      </Routes>
     </>
   );
 };
