@@ -1,24 +1,12 @@
-/* .cabecalho {
-    background-color: rgb(255, 196, 0);
-    border-bottom: 3px solid rgb(170, 130, 0);
-    color: #fff;
-    position: fixed;
+* {
+    transition: .5s;
     top: 0;
     left: 0;
-    height: 70px;
-    width: 100vw;
-    display: flex;
-    } */
+}
     
-    * {
-        transition: .5s;
-        top: 0;
-        left: 0;
-    }
-    
-    header {
-        background-color: rgba(27, 27, 27, 0.774);
-        height: 100vh;
+header {
+    background-color: rgba(0, 0, 0, 0.774);
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -38,7 +26,7 @@ header nav ul {
     text-align: left;
 }
 
-header .btnfechar,.btnabrir {
+header #btn {
     cursor: pointer;
 }
 
@@ -50,7 +38,7 @@ header .btnfechar svg{
     color: rgb(255, 196, 0);
 }
 
-header .btnfechar:hover svg,.btnabrir:hover svg{
+#btn:hover{
     transform: scale(1.5);
 }
 
@@ -60,6 +48,7 @@ header .btnfechar {
 }
 
 .hamburguer {
+    width: 100;
     position: fixed;
     top: 0;
     height: 73px;
@@ -68,11 +57,13 @@ header .btnfechar {
 
 .btnabrir {
     padding: 20px 20px;
+    width: 100vw;
     text-align: left;
 }
 
 .escMenu {
-    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    background-color: #000000a8;
     width: 100%;
     height: 100%;
     position: fixed;

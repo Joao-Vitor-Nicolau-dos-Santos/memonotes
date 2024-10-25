@@ -1,11 +1,13 @@
-// import BlocList from './Componentes/BlocList/index';
-// import BlocForm from './Componentes/BlocForm/index';
+import BlocList from '../../Componentes/BlocList/index';
+import BlocForm from '../../Componentes/BlocForm/index';
+import Cabecalho from '../../Componentes/Cabecalho/index';
 
 function Notas() {
   return (
     <>
-      {/* <BlocForm/>
-      <BlocList/> */}
+      <Cabecalho/>
+      <BlocForm/>
+      <BlocList/>
     </>
   );
 };

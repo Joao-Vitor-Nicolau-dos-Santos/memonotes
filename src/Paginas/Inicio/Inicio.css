@@ -1,0 +1,77 @@
+*{
+    font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+.container {
+    z-index: 0;
+    display: flex;
+    align-items: center; 
+    height: 100vh; 
+    justify-content: space-around;
+}
+  
+.texto {
+    margin-right: 20px;
+    text-align: left;
+}
+
+.note_img {
+    width: 25vw;
+    max-width: 100%;
+    height: auto;
+    animation: rotate 5s infinite ease-in-out;
+    z-index: -1;
+}
+   
+.container h1{
+    font-size: 4rem;
+}
+
+.container h3{
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.container h5{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.note_btn{
+    font-weight: 1000;
+    font-size: 1.5rem;
+    border: none;
+    background-color: rgb(255, 196, 0);
+    color: #fff;
+    padding: 5px;
+    padding-inline: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.link:visited{
+    color: #fff;
+    text-decoration: none;
+}
+
+.note_btn:hover{
+    transform: scale(1.2);
+    background-color: rgb(255, 206, 44);
+    border-radius: 10px;
+}

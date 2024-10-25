@@ -18,6 +18,7 @@ function Cabecalho() {
                         width="30"
                         fill="currentColor"
                         className="bi bi-list"
+                        id="btn"
                         viewBox="0 0 16 16"
                         onClick={toggleMenu}
                     >
@@ -27,7 +28,7 @@ function Cabecalho() {
                         />
                     </svg>
                 </div>
-                <hr />
+                {/* <hr /> */}
 
                 <header className={`header ${menuOpen ? 'abrMenu' : ''}`}>
                     <div className="btnfechar" onClick={toggleMenu}>
@@ -35,6 +36,7 @@ function Cabecalho() {
                             xmlns="http://www.w3.org/2000/svg"
                             width="30"
                             fill="currentColor"
+                            id="btn"
                             className="bi bi-x-lg"
                             viewBox="0 0 16 16"
                         >

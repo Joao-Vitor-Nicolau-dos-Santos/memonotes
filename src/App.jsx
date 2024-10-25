@@ -1,7 +1,7 @@
 import { Navigate,Route,Routes } from 'react-router-dom';
-import BlocList from './Componentes/BlocList/index';
-import BlocForm from './Componentes/BlocForm/index';
-import Cabecalho from './Componentes/Cabecalho';
+// import BlocList from './Componentes/BlocList/index';
+// import BlocForm from './Componentes/BlocForm/index';
+// import Cabecalho from './Componentes/Cabecalho';
 
 
 // // Configurações das paginas
@@ -18,9 +18,9 @@ import Notas from './Paginas/Notas/index';
 function App() {
   return (
     <>
-      <Cabecalho/>
+      {/* <Cabecalho/>
       <BlocForm/>
-      <BlocList/>
+      <BlocList/> */}
 
       <Routes>
         <Route index element={<Navigate replace to="/inicio" />} />
