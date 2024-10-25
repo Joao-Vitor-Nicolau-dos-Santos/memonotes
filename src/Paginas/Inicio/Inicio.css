@@ -63,6 +63,7 @@
 
 .link{
     text-decoration: none;
+    color: #fff;
 }
 
 .link:visited{
@@ -74,4 +75,14 @@
     transform: scale(1.2);
     background-color: rgb(255, 206, 44);
     border-radius: 10px;
+}
+
+.img_apresentacao{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.img_apresentacao img{
+    width: 10vw;
 }
