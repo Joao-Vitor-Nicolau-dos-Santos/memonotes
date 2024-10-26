@@ -86,3 +86,33 @@
 .img_apresentacao img{
     width: 10vw;
 }
+
+.card {
+    background-color: #fff;
+    border-radius: 10px; 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    max-width: 300px;
+    margin: 20px; 
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    transform: scale(1.1);
+}
+
+.card_title {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0 0 10px; 
+}
+
+.card h6{
+    font-size: 1rem;
+}
+
+.container img{
+    z-index: -2;
+}
