@@ -18,10 +18,6 @@ import Notas from './Paginas/Notas/index';
 function App() {
   return (
     <>
-      {/* <Cabecalho/>
-      <BlocForm/>
-      <BlocList/> */}
-
       <Routes>
         <Route index element={<Navigate replace to="/inicio" />} />
         <Route path="/cadastro" element={<Cadastro />} />

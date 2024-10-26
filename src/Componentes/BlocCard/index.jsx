@@ -7,7 +7,6 @@ function BlocCard({ note }) {
   return (
     <section className="note">
       <div className="div_note">
-        {/* <p className="note_id">Id: {note.id}</p> */}
         <h1 className="type">Titulo:</h1>
         <h1 className="note_title">{note.title}</h1>
         <h1 className="type">Conteúdo:</h1>

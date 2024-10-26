@@ -7,7 +7,7 @@ function BlocList() {
   const {notes} = useContext(BlocContext);
 
   if (notes.length === 0) {
-    return <h2 className="note_empty">Empty</h2>;
+    return <h2 className="note_empty">Sem notas salvas.</h2>;
   }
   
   return (
