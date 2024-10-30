@@ -12,7 +12,7 @@
   
 .texto {
     margin-right: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .note_img {
@@ -23,16 +23,16 @@
     z-index: -1;
 }
    
-.container h1{
+#inicio_container h1{
     font-size: 4rem;
 }
 
-.container h3{
+#inicio_container h3{
     font-size: 2rem;
     font-weight: 100;
 }
 
-.container h5{
+#inicio_container h5{
     font-weight: 500;
     font-size: 1.5rem;
 }
@@ -49,13 +49,14 @@
     }
 }
 
-.note_btn{
+.create_note_btn{
     font-weight: 1000;
     font-size: 1.5rem;
     border: none;
     background-color: rgb(255, 196, 0);
     color: #fff;
     padding: 5px;
+    margin-top: 1.5rem;
     padding-inline: 15px;
     cursor: pointer;
     text-decoration: none;
@@ -71,10 +72,10 @@
     text-decoration: none;
 }
 
-.note_btn:hover{
+.create_note_btn:hover{
     transform: scale(1.2);
     background-color: rgb(255, 206, 44);
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 .img_apresentacao{
@@ -115,4 +116,8 @@
 
 .container img{
     z-index: -2;
+}
+
+#container_apresentacao{
+    text-align: center ;
 }

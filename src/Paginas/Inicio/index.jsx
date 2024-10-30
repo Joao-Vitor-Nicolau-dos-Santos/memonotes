@@ -10,19 +10,19 @@ function Inicio() {
     return (
       <>
         <Cabecalho/>
-        <div className="container" >
+        <div className="container" id="inicio_container">
           <div className="texto">
             <h3>Bem-Vindo ao</h3>
             <h1>Memo Notes</h1>
             <h5>Nossa missão é ajuda-lo na organização de seus projetos.</h5>
-            <button className="note_btn">
+            <button className="create_note_btn">
               <NavLink className='link' to="/notas"> Criar nota →</NavLink>
             </button>
           </div>
           <img src={note} alt="note" className="note_img" />
         </div>
 
-        <div className="container" id="">
+        <div className="container" id="container_apresentacao">
           <div className="apresentacao">
             <h1>Começe suas notas com a gente.</h1>
             <h5>Transforme suas ideias em realidade!

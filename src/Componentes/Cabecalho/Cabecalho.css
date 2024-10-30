@@ -39,6 +39,7 @@ header .btnfechar svg{
 }
 
 #btn:hover{
+    cursor: pointer;
     transform: scale(1.5);
 }
 
