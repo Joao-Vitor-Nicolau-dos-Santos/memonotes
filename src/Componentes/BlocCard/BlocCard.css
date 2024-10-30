@@ -9,6 +9,8 @@
     flex-direction: column;
     align-content: center;
     background-color: rgb(255, 255, 255);
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255, 121, 44) #f1f1f1;
 }
 
 .note:hover{

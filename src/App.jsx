@@ -1,8 +1,4 @@
 import { Navigate,Route,Routes } from 'react-router-dom';
-// import BlocList from './Componentes/BlocList/index';
-// import BlocForm from './Componentes/BlocForm/index';
-// import Cabecalho from './Componentes/Cabecalho';
-
 
 // // Configurações das paginas
 import Cadastro from './Paginas/Cadastro/index';
@@ -11,9 +7,7 @@ import Inicio from './Paginas/Inicio/index';
 import Login from './Paginas/Login/index';
 import Notas from './Paginas/Notas/index';
 
-
-// Sistema de notas em si
-
+import './general.css';
 
 function App() {
   return (

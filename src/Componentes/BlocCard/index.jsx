@@ -20,4 +20,5 @@ function BlocCard({ note }) {
     </section>
   );
 }
+
 export default BlocCard;
