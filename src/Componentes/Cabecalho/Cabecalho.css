@@ -55,6 +55,7 @@ header .btnfechar {
     height: 73px;
     background-color: rgb(255, 196, 0);
     z-index: 100;
+    flex-direction: row;
 }
 
 .btnabrir {

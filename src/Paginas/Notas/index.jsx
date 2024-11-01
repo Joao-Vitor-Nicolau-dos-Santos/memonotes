@@ -1,6 +1,7 @@
 import BlocList from '../../Componentes/BlocList/index';
 import BlocForm from '../../Componentes/BlocForm/index';
 import Cabecalho from '../../Componentes/Cabecalho/index';
+import './Notas.css';
 
 function Notas() {
   return (
@@ -8,6 +9,7 @@ function Notas() {
       <Cabecalho/>
       <BlocForm/>
       <BlocList/>
+      <div className="space"></div>
     </>
   );
 };

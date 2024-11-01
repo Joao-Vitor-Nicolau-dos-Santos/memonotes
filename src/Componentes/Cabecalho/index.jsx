@@ -12,6 +12,7 @@ function Cabecalho() {
     return (
         <>
             <div className="hamburguer">
+
                 <div className="btnabrir">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +29,6 @@ function Cabecalho() {
                         />
                     </svg>
                 </div>
-                {/* <hr /> */}
 
                 <header className={`header ${menuOpen ? 'abrMenu' : ''}`}>
                     <div className="btnfechar" onClick={toggleMenu}>
