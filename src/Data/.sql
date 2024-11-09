@@ -1,7 +1,0 @@
-CREATE DATABASE sistema_notas;
-
-CREATE TABLE notas (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    titulo VARCHAR(255) NOT NULL,
-    conteudo TEXT NOT NULL
-);

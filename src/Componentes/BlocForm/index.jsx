@@ -10,9 +10,7 @@ function BlocForm() {
 
   const HandleSubmit = (e) => {
     e.preventDefault();
-
     CreateNote({
-      id: setKeyId(keyId + 1),
       title,
       description,
     });

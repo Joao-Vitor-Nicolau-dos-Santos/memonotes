@@ -1,33 +1,113 @@
-import { createContext,useEffect,useState } from "react";
-import {Notes as data} from '../Data/Notes';
+// import { createContext,useEffect,useState } from "react";
+// import {Notes as data} from '../Data/Notes';
 
+// export const BlocContext = createContext();
+
+// function BlocContextProvider(props){
+//         const[notes, setNotes] = useState([]);
+//         const[keyId, setKeyId] = useState(4);
+    
+//         function CreateNote(note){
+//                 setNotes([
+//                         ...notes,
+//                         {
+//                                 id: keyId,
+//                                 title: note.title,
+//                                 description: note.description,
+//                             }
+//                         ])
+//     };
+
+//     useEffect(() =>{
+//         setNotes(data)
+//     },[]);
+
+//     function DeleteNote(noteId){
+//         setNotes(notes.filter((note)=>note.id !== noteId));
+//     }
+
+//     return(
+//             <BlocContext.Provider
+//             value={{
+//                 keyId,
+//                 setKeyId,
+//                 notes,
+//                 DeleteNote,
+//                 CreateNote,
+//             }}
+//         >
+//             {props.children}
+//         </BlocContext.Provider>  
+//     );
+// };
+
+// export default BlocContextProvider; 
+
+
+// BD
+import { createContext, useEffect, useState } from "react";
+
+// Criação do contexto
 export const BlocContext = createContext();
 
-function BlocContextProvider(props){
-        const[notes, setNotes] = useState([]);
-        const[keyId, setKeyId] = useState(4);
-    
-        function CreateNote(note){
-                setNotes([
-                        ...notes,
-                        {
-                                id: keyId,
-                                title: note.title,
-                                description: note.description,
-                            }
-                        ])
-    };
+function BlocContextProvider(props) {
+    const [notes, setNotes] = useState([]);
+    const [keyId, setKeyId] = useState(4); // Definido para controle local
 
-    useEffect(() =>{
-        setNotes(data)
-    },[]);
+    // Função para criar uma nova nota
+    async function CreateNote(note) {
+        console.log(note)
+        const response = await fetch("http://localhost:5000/api/notes", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                titulo: note.title,
+                conteudo: note.description,
+            }),
+        });
 
-    function DeleteNote(noteId){
-        setNotes(notes.filter((note)=>note.id !== noteId));
+        if (response.ok) {
+            const newNote = await response.json();
+            setNotes((prevNotes) => [...prevNotes, newNote]);
+        } else {
+            console.error("Erro ao criar a nota");
+        }
+
+        console.log(note);
     }
 
-    return(
-            <BlocContext.Provider
+    // Função para deletar uma nota
+    async function DeleteNote(noteId) {
+        const response = await fetch(`http://localhost:5000/api/notes/${noteId}`, {
+            method: "DELETE",
+        });
+
+        if (response.ok) {
+            setNotes(notes.filter((note) => note.id !== noteId));
+        } else {
+            console.error("Erro ao deletar a nota");
+        }
+    }
+
+    // UseEffect para carregar as notas ao iniciar
+    // useEffect(() => {
+    //     async function fetchNotes() {
+    //         const response = await fetch("http://localhost:5000/api/notes");
+    //         if (response.ok) {
+    //             const data = await response.json();
+    //             setNotes(data);
+    //         } else {
+    //             console.error("Erro ao carregar as notas");
+    //         }
+    //     }
+
+    //     fetchNotes();
+    // }, []);
+
+    return (
+        <BlocContext.Provider
             value={{
                 keyId,
                 setKeyId,
@@ -37,65 +117,8 @@ function BlocContextProvider(props){
             }}
         >
             {props.children}
-        </BlocContext.Provider>  
+        </BlocContext.Provider>
     );
-};
+}
 
-export default BlocContextProvider; 
-
-//db
-
-// import { createContext, useEffect, useState } from "react";
-// import axios from 'axios'; // Adicione o axios para requisições HTTP
-
-// export const BlocContext = createContext();
-
-// function BlocContextProvider(props) {
-//     const [notes, setNotes] = useState([]);
-//     const [keyId, setKeyId] = useState(4); // Você pode remover isso, pois o ID será gerado pelo banco
-    
-//     useEffect(() => {
-//         fetchNotes(); // Chame a função para buscar notas do banco de dados
-//     }, []);
-
-//     const fetchNotes = async () => {
-//         try {
-//             const response = await axios.get('http://localhost:5000/notas'); // URL do seu servidor
-//             setNotes(response.data);
-//         } catch (error) {
-//             console.error('Erro ao buscar notas:', error);
-//         }
-//     };
-
-//     const CreateNote = async (note) => {
-//         try {
-//             const response = await axios.post('http://localhost:5000/notas', note);
-//             setNotes([...notes, response.data]);
-//         } catch (error) {
-//             console.error('Erro ao criar nota:', error);
-//         }
-//     };
-
-//     const DeleteNote = async (noteId) => {
-//         try {
-//             await axios.delete(`http://localhost:5000/notas/${noteId}`);
-//             setNotes(notes.filter((note) => note.id !== noteId));
-//         } catch (error) {
-//             console.error('Erro ao deletar nota:', error);
-//         }
-//     };
-
-//     return (
-//         <BlocContext.Provider
-//             value={{
-//                 notes,
-//                 DeleteNote,
-//                 CreateNote,
-//             }}
-//         >
-//             {props.children}
-//         </BlocContext.Provider>
-//     );
-// };
-
-// export default BlocContextProvider;
+export default BlocContextProvider;
