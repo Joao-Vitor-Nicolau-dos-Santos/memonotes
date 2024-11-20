@@ -20,6 +20,10 @@ section{
     margin: auto;
 }
 
+.form:hover{
+    transform: scale(1.02);
+}
+
 .form_input{
     width: 35vw;
     height: 4vw;
@@ -27,6 +31,10 @@ section{
     border-radius: 10px;
     border: 1px solid rgb(255, 196, 0);
     padding-left: 5px;
+}
+
+.form_input:hover, .form_textarea:hover{
+    transform: scaleX(1.04);
 }
 
 .form_textarea{

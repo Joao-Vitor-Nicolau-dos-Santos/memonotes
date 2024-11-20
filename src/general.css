@@ -3,18 +3,10 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Cor de fundo da trilha */
-    border-radius: 10px; /* Bordas arredondadas */
+    background: #000000;
 }
 
-/* Estilo do "thumb" (parte que se arrasta) */
 ::-webkit-scrollbar-thumb {
-    background: rgb(255, 121, 44); /* Cor do thumb */
-    border-radius: 10px; /* Bordas arredondadas */
-}
-
-/* Estilo do thumb quando hover */
-::-webkit-scrollbar-thumb:hover {
-    width: 5px;
-    background:rgb(255, 121, 44); /* Cor ao passar o mouse */
+    background: rgb(255, 121, 44);
+    border-radius: 5px;
 }
